@@ -1,0 +1,588 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6BDF19131E5192CB007F8C37 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19121E5192CB007F8C37 /* main.m */; };
+		6BDF19161E5192CB007F8C37 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19151E5192CB007F8C37 /* AppDelegate.m */; };
+		6BDF19191E5192CB007F8C37 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19181E5192CB007F8C37 /* ViewController.m */; };
+		6BDF191C1E5192CB007F8C37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF191A1E5192CB007F8C37 /* Main.storyboard */; };
+		6BDF191E1E5192CB007F8C37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF191D1E5192CB007F8C37 /* Assets.xcassets */; };
+		6BDF19211E5192CB007F8C37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF191F1E5192CB007F8C37 /* LaunchScreen.storyboard */; };
+		6BDF19451E5193C3007F8C37 /* MLShoppingCarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF192A1E5193C3007F8C37 /* MLShoppingCarModel.m */; };
+		6BDF19461E5193C3007F8C37 /* MLShoppingHeaderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF192C1E5193C3007F8C37 /* MLShoppingHeaderModel.m */; };
+		6BDF19471E5193C3007F8C37 /* MLShoppingHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF192E1E5193C3007F8C37 /* MLShoppingHeaderView.m */; };
+		6BDF19491E5193C3007F8C37 /* MLShoppingBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19331E5193C3007F8C37 /* MLShoppingBottomView.m */; };
+		6BDF194A1E5193C3007F8C37 /* MLShoppingCarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19351E5193C3007F8C37 /* MLShoppingCarHeaderView.m */; };
+		6BDF194C1E5193C3007F8C37 /* MLShoppingCarTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19391E5193C3007F8C37 /* MLShoppingCarTableView.m */; };
+		6BDF194D1E5193C3007F8C37 /* MLShoppingCarTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF193B1E5193C3007F8C37 /* MLShoppingCarTableViewCell.m */; };
+		6BDF194E1E5193C3007F8C37 /* MLShoppingBottomViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF193E1E5193C3007F8C37 /* MLShoppingBottomViewModel.m */; };
+		6BDF194F1E5193C3007F8C37 /* MLShoppingCarHeaderViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19401E5193C3007F8C37 /* MLShoppingCarHeaderViewModel.m */; };
+		6BDF19501E5193C3007F8C37 /* MLShoppingCarTableViewCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19421E5193C3007F8C37 /* MLShoppingCarTableViewCellViewModel.m */; };
+		6BDF19511E5193C3007F8C37 /* MLShoppingCarTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19441E5193C3007F8C37 /* MLShoppingCarTableViewModel.m */; };
+		6BDF19551E5193F2007F8C37 /* MLShoppingCartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19541E5193F2007F8C37 /* MLShoppingCartViewController.m */; };
+		6BDF195A1E519438007F8C37 /* MLBaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19581E519438007F8C37 /* MLBaseView.m */; };
+		6BDF19641E519447007F8C37 /* MLBaseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF195C1E519447007F8C37 /* MLBaseViewModel.m */; };
+		6BDF19651E519447007F8C37 /* MLBaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF195F1E519447007F8C37 /* MLBaseTableView.m */; };
+		6BDF19661E519447007F8C37 /* MLBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19621E519447007F8C37 /* MLBaseTableViewCell.m */; };
+		6BDF196A1E519451007F8C37 /* MLBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19681E519451007F8C37 /* MLBaseViewController.m */; };
+		6BDF196E1E5198F2007F8C37 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF196D1E5198F2007F8C37 /* UIColor+Hex.m */; };
+		6BDF19721E519945007F8C37 /* MLHerbsChoseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDF19701E519945007F8C37 /* MLHerbsChoseView.m */; };
+		6BDF19731E519945007F8C37 /* MLHerbsChoseView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF19711E519945007F8C37 /* MLHerbsChoseView.xib */; };
+		6BDF19781E519EDB007F8C37 /* ico_check_nomal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF19741E519EDB007F8C37 /* ico_check_nomal@2x.png */; };
+		6BDF19791E519EDB007F8C37 /* ico_check_nomal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF19751E519EDB007F8C37 /* ico_check_nomal@3x.png */; };
+		6BDF197A1E519EDB007F8C37 /* ico_check_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF19761E519EDB007F8C37 /* ico_check_select@2x.png */; };
+		6BDF197B1E519EDB007F8C37 /* ico_check_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BDF19771E519EDB007F8C37 /* ico_check_select@3x.png */; };
+		CB88497961E2781292B1871C /* libPods-RAC-MVVM-MLShoppingCart.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CB139ED282946062FEC37FA /* libPods-RAC-MVVM-MLShoppingCart.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0970C190685ACD55B06BFE54 /* Pods-RAC-MVVM-MLShoppingCart.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC-MVVM-MLShoppingCart.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RAC-MVVM-MLShoppingCart/Pods-RAC-MVVM-MLShoppingCart.debug.xcconfig"; sourceTree = "<group>"; };
+		10BBAC5C97D958E87B57A801 /* Pods-RAC-MVVM-MLShoppingCart.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RAC-MVVM-MLShoppingCart.release.xcconfig"; path = "Pods/Target Support Files/Pods-RAC-MVVM-MLShoppingCart/Pods-RAC-MVVM-MLShoppingCart.release.xcconfig"; sourceTree = "<group>"; };
+		6BDF190E1E5192CB007F8C37 /* RAC-MVVM-MLShoppingCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RAC-MVVM-MLShoppingCart.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BDF19121E5192CB007F8C37 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6BDF19141E5192CB007F8C37 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6BDF19151E5192CB007F8C37 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6BDF19171E5192CB007F8C37 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6BDF19181E5192CB007F8C37 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6BDF191B1E5192CB007F8C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6BDF191D1E5192CB007F8C37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6BDF19201E5192CB007F8C37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BDF19221E5192CB007F8C37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BDF19291E5193C3007F8C37 /* MLShoppingCarModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingCarModel.h; sourceTree = "<group>"; };
+		6BDF192A1E5193C3007F8C37 /* MLShoppingCarModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingCarModel.m; sourceTree = "<group>"; };
+		6BDF192B1E5193C3007F8C37 /* MLShoppingHeaderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingHeaderModel.h; sourceTree = "<group>"; };
+		6BDF192C1E5193C3007F8C37 /* MLShoppingHeaderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingHeaderModel.m; sourceTree = "<group>"; };
+		6BDF192D1E5193C3007F8C37 /* MLShoppingHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingHeaderView.h; sourceTree = "<group>"; };
+		6BDF192E1E5193C3007F8C37 /* MLShoppingHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingHeaderView.m; sourceTree = "<group>"; };
+		6BDF19321E5193C3007F8C37 /* MLShoppingBottomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingBottomView.h; sourceTree = "<group>"; };
+		6BDF19331E5193C3007F8C37 /* MLShoppingBottomView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingBottomView.m; sourceTree = "<group>"; };
+		6BDF19341E5193C3007F8C37 /* MLShoppingCarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingCarHeaderView.h; sourceTree = "<group>"; };
+		6BDF19351E5193C3007F8C37 /* MLShoppingCarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingCarHeaderView.m; sourceTree = "<group>"; };
+		6BDF19381E5193C3007F8C37 /* MLShoppingCarTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingCarTableView.h; sourceTree = "<group>"; };
+		6BDF19391E5193C3007F8C37 /* MLShoppingCarTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingCarTableView.m; sourceTree = "<group>"; };
+		6BDF193A1E5193C3007F8C37 /* MLShoppingCarTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingCarTableViewCell.h; sourceTree = "<group>"; };
+		6BDF193B1E5193C3007F8C37 /* MLShoppingCarTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingCarTableViewCell.m; sourceTree = "<group>"; };
+		6BDF193D1E5193C3007F8C37 /* MLShoppingBottomViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingBottomViewModel.h; sourceTree = "<group>"; };
+		6BDF193E1E5193C3007F8C37 /* MLShoppingBottomViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingBottomViewModel.m; sourceTree = "<group>"; };
+		6BDF193F1E5193C3007F8C37 /* MLShoppingCarHeaderViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingCarHeaderViewModel.h; sourceTree = "<group>"; };
+		6BDF19401E5193C3007F8C37 /* MLShoppingCarHeaderViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingCarHeaderViewModel.m; sourceTree = "<group>"; };
+		6BDF19411E5193C3007F8C37 /* MLShoppingCarTableViewCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingCarTableViewCellViewModel.h; sourceTree = "<group>"; };
+		6BDF19421E5193C3007F8C37 /* MLShoppingCarTableViewCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingCarTableViewCellViewModel.m; sourceTree = "<group>"; };
+		6BDF19431E5193C3007F8C37 /* MLShoppingCarTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingCarTableViewModel.h; sourceTree = "<group>"; };
+		6BDF19441E5193C3007F8C37 /* MLShoppingCarTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingCarTableViewModel.m; sourceTree = "<group>"; };
+		6BDF19531E5193F2007F8C37 /* MLShoppingCartViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLShoppingCartViewController.h; sourceTree = "<group>"; };
+		6BDF19541E5193F2007F8C37 /* MLShoppingCartViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLShoppingCartViewController.m; sourceTree = "<group>"; };
+		6BDF19571E519438007F8C37 /* MLBaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseView.h; sourceTree = "<group>"; };
+		6BDF19581E519438007F8C37 /* MLBaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBaseView.m; sourceTree = "<group>"; };
+		6BDF19591E519438007F8C37 /* MLBaseViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseViewProtocol.h; sourceTree = "<group>"; };
+		6BDF195B1E519447007F8C37 /* MLBaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseViewModel.h; sourceTree = "<group>"; };
+		6BDF195C1E519447007F8C37 /* MLBaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBaseViewModel.m; sourceTree = "<group>"; };
+		6BDF195D1E519447007F8C37 /* MLBaseViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseViewModelProtocol.h; sourceTree = "<group>"; };
+		6BDF195E1E519447007F8C37 /* MLBaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseTableView.h; sourceTree = "<group>"; };
+		6BDF195F1E519447007F8C37 /* MLBaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBaseTableView.m; sourceTree = "<group>"; };
+		6BDF19601E519447007F8C37 /* MLBaseTableViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseTableViewProtocol.h; sourceTree = "<group>"; };
+		6BDF19611E519447007F8C37 /* MLBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseTableViewCell.h; sourceTree = "<group>"; };
+		6BDF19621E519447007F8C37 /* MLBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBaseTableViewCell.m; sourceTree = "<group>"; };
+		6BDF19631E519447007F8C37 /* MLBaseTableViewCellProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseTableViewCellProtocol.h; sourceTree = "<group>"; };
+		6BDF19671E519451007F8C37 /* MLBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseViewController.h; sourceTree = "<group>"; };
+		6BDF19681E519451007F8C37 /* MLBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLBaseViewController.m; sourceTree = "<group>"; };
+		6BDF19691E519451007F8C37 /* MLBaseViewControllerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLBaseViewControllerProtocol.h; sourceTree = "<group>"; };
+		6BDF196B1E519510007F8C37 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6BDF196C1E5198F2007F8C37 /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		6BDF196D1E5198F2007F8C37 /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
+		6BDF196F1E519945007F8C37 /* MLHerbsChoseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLHerbsChoseView.h; sourceTree = "<group>"; };
+		6BDF19701E519945007F8C37 /* MLHerbsChoseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLHerbsChoseView.m; sourceTree = "<group>"; };
+		6BDF19711E519945007F8C37 /* MLHerbsChoseView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MLHerbsChoseView.xib; sourceTree = "<group>"; };
+		6BDF19741E519EDB007F8C37 /* ico_check_nomal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_check_nomal@2x.png"; sourceTree = "<group>"; };
+		6BDF19751E519EDB007F8C37 /* ico_check_nomal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_check_nomal@3x.png"; sourceTree = "<group>"; };
+		6BDF19761E519EDB007F8C37 /* ico_check_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_check_select@2x.png"; sourceTree = "<group>"; };
+		6BDF19771E519EDB007F8C37 /* ico_check_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ico_check_select@3x.png"; sourceTree = "<group>"; };
+		8CB139ED282946062FEC37FA /* libPods-RAC-MVVM-MLShoppingCart.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RAC-MVVM-MLShoppingCart.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6BDF190B1E5192CB007F8C37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB88497961E2781292B1871C /* libPods-RAC-MVVM-MLShoppingCart.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0702EA464F563F520A83C00D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0970C190685ACD55B06BFE54 /* Pods-RAC-MVVM-MLShoppingCart.debug.xcconfig */,
+				10BBAC5C97D958E87B57A801 /* Pods-RAC-MVVM-MLShoppingCart.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0A530EC5768000CC01EE0C64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CB139ED282946062FEC37FA /* libPods-RAC-MVVM-MLShoppingCart.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6BDF19051E5192CB007F8C37 = {
+			isa = PBXGroup;
+			children = (
+				6BDF19101E5192CB007F8C37 /* RAC-MVVM-MLShoppingCart */,
+				6BDF190F1E5192CB007F8C37 /* Products */,
+				0702EA464F563F520A83C00D /* Pods */,
+				0A530EC5768000CC01EE0C64 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6BDF190F1E5192CB007F8C37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BDF190E1E5192CB007F8C37 /* RAC-MVVM-MLShoppingCart.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6BDF19101E5192CB007F8C37 /* RAC-MVVM-MLShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				6BDF19561E519425007F8C37 /* BaseView */,
+				6BDF19281E5193C3007F8C37 /* Model */,
+				6BDF192F1E5193C3007F8C37 /* View */,
+				6BDF193C1E5193C3007F8C37 /* ViewModel */,
+				6BDF19521E5193E3007F8C37 /* ViewControler */,
+				6BDF19141E5192CB007F8C37 /* AppDelegate.h */,
+				6BDF19151E5192CB007F8C37 /* AppDelegate.m */,
+				6BDF19171E5192CB007F8C37 /* ViewController.h */,
+				6BDF19181E5192CB007F8C37 /* ViewController.m */,
+				6BDF196C1E5198F2007F8C37 /* UIColor+Hex.h */,
+				6BDF196D1E5198F2007F8C37 /* UIColor+Hex.m */,
+				6BDF191A1E5192CB007F8C37 /* Main.storyboard */,
+				6BDF191D1E5192CB007F8C37 /* Assets.xcassets */,
+				6BDF191F1E5192CB007F8C37 /* LaunchScreen.storyboard */,
+				6BDF19221E5192CB007F8C37 /* Info.plist */,
+				6BDF19111E5192CB007F8C37 /* Supporting Files */,
+			);
+			path = "RAC-MVVM-MLShoppingCart";
+			sourceTree = "<group>";
+		};
+		6BDF19111E5192CB007F8C37 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6BDF19741E519EDB007F8C37 /* ico_check_nomal@2x.png */,
+				6BDF19751E519EDB007F8C37 /* ico_check_nomal@3x.png */,
+				6BDF19761E519EDB007F8C37 /* ico_check_select@2x.png */,
+				6BDF19771E519EDB007F8C37 /* ico_check_select@3x.png */,
+				6BDF19121E5192CB007F8C37 /* main.m */,
+				6BDF196B1E519510007F8C37 /* PrefixHeader.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6BDF19281E5193C3007F8C37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6BDF19291E5193C3007F8C37 /* MLShoppingCarModel.h */,
+				6BDF192A1E5193C3007F8C37 /* MLShoppingCarModel.m */,
+				6BDF192B1E5193C3007F8C37 /* MLShoppingHeaderModel.h */,
+				6BDF192C1E5193C3007F8C37 /* MLShoppingHeaderModel.m */,
+				6BDF192D1E5193C3007F8C37 /* MLShoppingHeaderView.h */,
+				6BDF192E1E5193C3007F8C37 /* MLShoppingHeaderView.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6BDF192F1E5193C3007F8C37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6BDF19321E5193C3007F8C37 /* MLShoppingBottomView.h */,
+				6BDF19331E5193C3007F8C37 /* MLShoppingBottomView.m */,
+				6BDF19341E5193C3007F8C37 /* MLShoppingCarHeaderView.h */,
+				6BDF19351E5193C3007F8C37 /* MLShoppingCarHeaderView.m */,
+				6BDF19381E5193C3007F8C37 /* MLShoppingCarTableView.h */,
+				6BDF19391E5193C3007F8C37 /* MLShoppingCarTableView.m */,
+				6BDF193A1E5193C3007F8C37 /* MLShoppingCarTableViewCell.h */,
+				6BDF193B1E5193C3007F8C37 /* MLShoppingCarTableViewCell.m */,
+				6BDF196F1E519945007F8C37 /* MLHerbsChoseView.h */,
+				6BDF19701E519945007F8C37 /* MLHerbsChoseView.m */,
+				6BDF19711E519945007F8C37 /* MLHerbsChoseView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6BDF193C1E5193C3007F8C37 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				6BDF193D1E5193C3007F8C37 /* MLShoppingBottomViewModel.h */,
+				6BDF193E1E5193C3007F8C37 /* MLShoppingBottomViewModel.m */,
+				6BDF193F1E5193C3007F8C37 /* MLShoppingCarHeaderViewModel.h */,
+				6BDF19401E5193C3007F8C37 /* MLShoppingCarHeaderViewModel.m */,
+				6BDF19411E5193C3007F8C37 /* MLShoppingCarTableViewCellViewModel.h */,
+				6BDF19421E5193C3007F8C37 /* MLShoppingCarTableViewCellViewModel.m */,
+				6BDF19431E5193C3007F8C37 /* MLShoppingCarTableViewModel.h */,
+				6BDF19441E5193C3007F8C37 /* MLShoppingCarTableViewModel.m */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6BDF19521E5193E3007F8C37 /* ViewControler */ = {
+			isa = PBXGroup;
+			children = (
+				6BDF19531E5193F2007F8C37 /* MLShoppingCartViewController.h */,
+				6BDF19541E5193F2007F8C37 /* MLShoppingCartViewController.m */,
+			);
+			name = ViewControler;
+			sourceTree = "<group>";
+		};
+		6BDF19561E519425007F8C37 /* BaseView */ = {
+			isa = PBXGroup;
+			children = (
+				6BDF19671E519451007F8C37 /* MLBaseViewController.h */,
+				6BDF19681E519451007F8C37 /* MLBaseViewController.m */,
+				6BDF19691E519451007F8C37 /* MLBaseViewControllerProtocol.h */,
+				6BDF195B1E519447007F8C37 /* MLBaseViewModel.h */,
+				6BDF195C1E519447007F8C37 /* MLBaseViewModel.m */,
+				6BDF195D1E519447007F8C37 /* MLBaseViewModelProtocol.h */,
+				6BDF195E1E519447007F8C37 /* MLBaseTableView.h */,
+				6BDF195F1E519447007F8C37 /* MLBaseTableView.m */,
+				6BDF19601E519447007F8C37 /* MLBaseTableViewProtocol.h */,
+				6BDF19611E519447007F8C37 /* MLBaseTableViewCell.h */,
+				6BDF19621E519447007F8C37 /* MLBaseTableViewCell.m */,
+				6BDF19631E519447007F8C37 /* MLBaseTableViewCellProtocol.h */,
+				6BDF19571E519438007F8C37 /* MLBaseView.h */,
+				6BDF19581E519438007F8C37 /* MLBaseView.m */,
+				6BDF19591E519438007F8C37 /* MLBaseViewProtocol.h */,
+			);
+			name = BaseView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6BDF190D1E5192CB007F8C37 /* RAC-MVVM-MLShoppingCart */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6BDF19251E5192CB007F8C37 /* Build configuration list for PBXNativeTarget "RAC-MVVM-MLShoppingCart" */;
+			buildPhases = (
+				32596960A1A74FA696449A90 /* [CP] Check Pods Manifest.lock */,
+				6BDF190A1E5192CB007F8C37 /* Sources */,
+				6BDF190B1E5192CB007F8C37 /* Frameworks */,
+				6BDF190C1E5192CB007F8C37 /* Resources */,
+				3F992817DE45409E168EC26E /* [CP] Embed Pods Frameworks */,
+				136FB3FE2CCEC2813AD7DD2D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RAC-MVVM-MLShoppingCart";
+			productName = "RAC-MVVM-MLShoppingCart";
+			productReference = 6BDF190E1E5192CB007F8C37 /* RAC-MVVM-MLShoppingCart.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6BDF19061E5192CB007F8C37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Visoport;
+				TargetAttributes = {
+					6BDF190D1E5192CB007F8C37 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6BDF19091E5192CB007F8C37 /* Build configuration list for PBXProject "RAC-MVVM-MLShoppingCart" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6BDF19051E5192CB007F8C37;
+			productRefGroup = 6BDF190F1E5192CB007F8C37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6BDF190D1E5192CB007F8C37 /* RAC-MVVM-MLShoppingCart */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6BDF190C1E5192CB007F8C37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BDF19791E519EDB007F8C37 /* ico_check_nomal@3x.png in Resources */,
+				6BDF19211E5192CB007F8C37 /* LaunchScreen.storyboard in Resources */,
+				6BDF191E1E5192CB007F8C37 /* Assets.xcassets in Resources */,
+				6BDF19781E519EDB007F8C37 /* ico_check_nomal@2x.png in Resources */,
+				6BDF197B1E519EDB007F8C37 /* ico_check_select@3x.png in Resources */,
+				6BDF191C1E5192CB007F8C37 /* Main.storyboard in Resources */,
+				6BDF19731E519945007F8C37 /* MLHerbsChoseView.xib in Resources */,
+				6BDF197A1E519EDB007F8C37 /* ico_check_select@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		136FB3FE2CCEC2813AD7DD2D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RAC-MVVM-MLShoppingCart/Pods-RAC-MVVM-MLShoppingCart-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32596960A1A74FA696449A90 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F992817DE45409E168EC26E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RAC-MVVM-MLShoppingCart/Pods-RAC-MVVM-MLShoppingCart-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6BDF190A1E5192CB007F8C37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BDF19191E5192CB007F8C37 /* ViewController.m in Sources */,
+				6BDF194D1E5193C3007F8C37 /* MLShoppingCarTableViewCell.m in Sources */,
+				6BDF19661E519447007F8C37 /* MLBaseTableViewCell.m in Sources */,
+				6BDF195A1E519438007F8C37 /* MLBaseView.m in Sources */,
+				6BDF196A1E519451007F8C37 /* MLBaseViewController.m in Sources */,
+				6BDF19641E519447007F8C37 /* MLBaseViewModel.m in Sources */,
+				6BDF19461E5193C3007F8C37 /* MLShoppingHeaderModel.m in Sources */,
+				6BDF19721E519945007F8C37 /* MLHerbsChoseView.m in Sources */,
+				6BDF19511E5193C3007F8C37 /* MLShoppingCarTableViewModel.m in Sources */,
+				6BDF194A1E5193C3007F8C37 /* MLShoppingCarHeaderView.m in Sources */,
+				6BDF196E1E5198F2007F8C37 /* UIColor+Hex.m in Sources */,
+				6BDF19491E5193C3007F8C37 /* MLShoppingBottomView.m in Sources */,
+				6BDF19501E5193C3007F8C37 /* MLShoppingCarTableViewCellViewModel.m in Sources */,
+				6BDF19471E5193C3007F8C37 /* MLShoppingHeaderView.m in Sources */,
+				6BDF19161E5192CB007F8C37 /* AppDelegate.m in Sources */,
+				6BDF19651E519447007F8C37 /* MLBaseTableView.m in Sources */,
+				6BDF194F1E5193C3007F8C37 /* MLShoppingCarHeaderViewModel.m in Sources */,
+				6BDF19131E5192CB007F8C37 /* main.m in Sources */,
+				6BDF19451E5193C3007F8C37 /* MLShoppingCarModel.m in Sources */,
+				6BDF194E1E5193C3007F8C37 /* MLShoppingBottomViewModel.m in Sources */,
+				6BDF194C1E5193C3007F8C37 /* MLShoppingCarTableView.m in Sources */,
+				6BDF19551E5193F2007F8C37 /* MLShoppingCartViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		6BDF191A1E5192CB007F8C37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BDF191B1E5192CB007F8C37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		6BDF191F1E5192CB007F8C37 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6BDF19201E5192CB007F8C37 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6BDF19231E5192CB007F8C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SHARED_PRECOMPS_DIR = "$(SRCROOT)/RAC-MVVM-MLShoppingCart/PrefixHeader.pch";
+			};
+			name = Debug;
+		};
+		6BDF19241E5192CB007F8C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SHARED_PRECOMPS_DIR = "$(SRCROOT)/RAC-MVVM-MLShoppingCart/PrefixHeader.pch";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6BDF19261E5192CB007F8C37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0970C190685ACD55B06BFE54 /* Pods-RAC-MVVM-MLShoppingCart.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RAC-MVVM-MLShoppingCart/PrefixHeader.pch";
+				INFOPLIST_FILE = "RAC-MVVM-MLShoppingCart/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "company.RAC-MVVM-MLShoppingCart";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "$(OBJROOT)/SharedPrecompiledHeaders";
+			};
+			name = Debug;
+		};
+		6BDF19271E5192CB007F8C37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10BBAC5C97D958E87B57A801 /* Pods-RAC-MVVM-MLShoppingCart.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/RAC-MVVM-MLShoppingCart/PrefixHeader.pch";
+				INFOPLIST_FILE = "RAC-MVVM-MLShoppingCart/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "company.RAC-MVVM-MLShoppingCart";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PRECOMPS_DIR = "$(OBJROOT)/SharedPrecompiledHeaders";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6BDF19091E5192CB007F8C37 /* Build configuration list for PBXProject "RAC-MVVM-MLShoppingCart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BDF19231E5192CB007F8C37 /* Debug */,
+				6BDF19241E5192CB007F8C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6BDF19251E5192CB007F8C37 /* Build configuration list for PBXNativeTarget "RAC-MVVM-MLShoppingCart" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6BDF19261E5192CB007F8C37 /* Debug */,
+				6BDF19271E5192CB007F8C37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6BDF19061E5192CB007F8C37 /* Project object */;
+}

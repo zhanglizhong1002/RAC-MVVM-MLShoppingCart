@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  RAC-MVVM-MLShoppingCart
+//
+//  Created by Visoport on 13/2/17.
+//  Copyright © 2017年 Visoport. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import "UIImageView+WebCache.h"
+#import <Masonry/Masonry.h>
+
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
+
+#define kScreenWidth             ([[UIScreen mainScreen] bounds].size.width)
+#define kScreenHeight            ([[UIScreen mainScreen] bounds].size.height)
+
+
+#import "UIColor+Hex.h"
+
+
+#endif /* PrefixHeader_pch */
