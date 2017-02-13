@@ -6,5 +6,7 @@
 qq: 1031974317
 */
 
+![image](https://github.com/zhanglizhong1002/RAC-MVVM-MLShoppingCart/blob/master/MLShoppingCart-GIF.gif) 
+
 
 # RAC-MVVM-MLShoppingCart
