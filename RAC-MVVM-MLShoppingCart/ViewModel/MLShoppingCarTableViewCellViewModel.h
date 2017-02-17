@@ -13,9 +13,8 @@
 
 @property (nonatomic, strong) RACSubject *editsetBtnClickSubject;
 @property (nonatomic, strong) RACSubject *selectBtnClickSubject;
-@property (nonatomic, strong) RACSubject *addBtnClickSubject;
-@property (nonatomic, strong) RACSubject *reduceBtnClickSubject;
 @property (nonatomic, strong) RACSubject *deleteBtnClickSubject;
+@property (nonatomic, strong) RACSubject *editTextFieldSubject;
 
 @property (nonatomic, copy) NSString *cartItemId;
 /*

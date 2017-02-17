@@ -32,25 +32,18 @@
     return _selectBtnClickSubject;
 }
 
-- (RACSubject *)addBtnClickSubject {
-    if (!_addBtnClickSubject) {
-        _addBtnClickSubject = [RACSubject subject];
-    }
-    return _addBtnClickSubject;
-}
-
-- (RACSubject *)reduceBtnClickSubject {
-    if (!_reduceBtnClickSubject) {
-        _reduceBtnClickSubject = [RACSubject subject];
-    }
-    return _reduceBtnClickSubject;
-}
-
 - (RACSubject *)deleteBtnClickSubject {
     if (!_deleteBtnClickSubject) {
         _deleteBtnClickSubject = [RACSubject subject];
     }
     return _deleteBtnClickSubject;
+}
+
+- (RACSubject *)editTextFieldSubject {
+    if (!_editTextFieldSubject) {
+        _editTextFieldSubject = [RACSubject subject];
+    }
+    return _editTextFieldSubject;
 }
 
 - (RACSubject *)editsetBtnClickSubject {

@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
@@ -26,6 +26,15 @@
     ViewController *vc = [[ViewController alloc] init];
     UINavigationController *nv = [[UINavigationController alloc] initWithRootViewController:vc];
     self.window.rootViewController = nv;
+    
+    
+    
+    IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+    manager.enable = YES;
+    manager.shouldResignOnTouchOutside = YES;
+    manager.shouldToolbarUsesTextFieldTintColor = YES;
+    manager.enableAutoToolbar = NO;
+    
     
     return YES;
 }

@@ -31,12 +31,12 @@
 @implementation MLShoppingCarTableView
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 - (instancetype)initWithViewModel:(id<MLBaseViewModelProtocol>)viewModel
 {
@@ -57,12 +57,11 @@
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.edges.equalTo(weakSelf);
-//        make.bottom.equalTo(@(-44));
+        make.bottom.equalTo(@(-44));
     }];
     
     [self.bottomView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.left.right.equalTo(weakSelf);
-        make.bottom.equalTo(weakSelf);
+        make.left.right.bottom.equalTo(weakSelf);
         make.height.equalTo(@(44));
     }];
     
@@ -81,10 +80,10 @@
     }];
     
     [[self.viewModel.headerViewModel.selectClickSubject takeUntil:self.rac_willDeallocSignal] subscribeNext:^(NSDictionary *dict) {
-
+        
         NSInteger section = [[dict objectForKey:@"section"] integerValue];
         BOOL isSelect = [[dict objectForKey:@"select"] boolValue];
-
+        
         for (int i = 0; i<[self.viewModel.dataArray[section] count]; i++) {
             MLShoppingCarModel *sectionModel = self.viewModel.dataArray[section][i];
             sectionModel.btnSelected = isSelect;
@@ -113,7 +112,7 @@
         }
         
         //判断是否全选---
-//        [self judgeSelectAll];
+        //        [self judgeSelectAll];
         [self clearingShop];
         [self.tableView reloadData];
     }];
@@ -164,6 +163,19 @@
     
     return cell;
 }
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSInteger sectionCount = [self.viewModel.dataArray[indexPath.section] count];
+    if ([indexPath row] == sectionCount-1) {
+        return 100;
+    }
+    else
+    {
+        return 105;
+    }
+}
+
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -237,7 +249,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [_tableView registerClass:[MLShoppingCarTableViewCell class] forCellReuseIdentifier:@"cell"];
-        _tableView.rowHeight = 100;
+        //        _tableView.rowHeight = 105;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     }
     return _tableView;
@@ -299,24 +311,12 @@
         [self.tableView reloadData];
     }];
     
-    
-    [[cell.viewModel.addBtnClickSubject takeUntil:self.rac_willDeallocSignal] subscribeNext:^(MLShoppingCarTableViewCell *myCell) {
+    [[cell.viewModel.editTextFieldSubject takeUntil:self.rac_willDeallocSignal] subscribeNext:^(MLShoppingCarTableViewCell *myCell) {
         
         NSIndexPath *myIndexPath = [self.tableView indexPathForCell:myCell];
         
         MLShoppingCarModel *model = self.viewModel.dataArray[myIndexPath.section][myIndexPath.row];
-        model.quantity = cell.editNumLabel.text;
-        
-        [self clearingShop];
-        [self.tableView reloadData];
-    }];
-    
-    [[cell.viewModel.reduceBtnClickSubject takeUntil:self.rac_willDeallocSignal] subscribeNext:^(MLShoppingCarTableViewCell *myCell) {
-        
-        NSIndexPath *myIndexPath = [self.tableView indexPathForCell:myCell];
-        
-        MLShoppingCarModel *model = self.viewModel.dataArray[myIndexPath.section][myIndexPath.row];
-        model.quantity = cell.editNumLabel.text;
+        model.quantity = cell.editNumTextField.text;
         
         [self clearingShop];
         [self.tableView reloadData];
@@ -339,11 +339,13 @@
         [self.tableView reloadData];
     }];
     
+    
+    
     [[cell.viewModel.editsetBtnClickSubject takeUntil:self.rac_willDeallocSignal] subscribeNext:^(MLShoppingCarTableViewCell *myCell) {
         
         [self.viewModel.hiddenTabbar sendNext:@(1)];
         
-//        NSIndexPath *myIndexPath = [self.tableView indexPathForCell:myCell];
+        //        NSIndexPath *myIndexPath = [self.tableView indexPathForCell:myCell];
         
         self.choseView = [[[NSBundle mainBundle] loadNibNamed:@"MLHerbsChoseView" owner:self options:nil] objectAtIndex:0];
         self.choseView.frame = CGRectMake(0, kScreenHeight, kScreenWidth, kScreenHeight);

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>58211CB50759DEEBF53828036F10512C</key>
+		<key>01B792B1E367A41E3B1C91C6D15D134C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>71E5EC87EAD1EF19F622C4FB530BA97A</key>
+		<key>5A238D01AE13AC47D976BCB91A8E33A6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>93080B376C4677C59235008D6968AF47</key>
+		<key>9650B5ADCE86F1A055FAFC635284BDB5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>9DC8D9E02903E93BD0B2FEC9D846EA20</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B83DF2CDA27420B69BF5CAEB694D9CD4</key>
 		<dict>
 			<key>primary</key>
 			<true/>

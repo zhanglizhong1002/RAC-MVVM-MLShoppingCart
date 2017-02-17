@@ -9,9 +9,13 @@
 #import "MLBaseTableViewCell.h"
 #import "MLShoppingCarTableViewCellViewModel.h"
 
-@interface MLShoppingCarTableViewCell : MLBaseTableViewCell
+@interface MLShoppingCarTableViewCell : MLBaseTableViewCell <UITextFieldDelegate>
 
-@property (nonatomic, strong) UILabel *editNumLabel;
+//@property (nonatomic, strong) UILabel *editNumLabel;
 @property (nonatomic, strong) MLShoppingCarTableViewCellViewModel *viewModel;
+
+@property (nonatomic, strong) UITextField *editNumTextField;
+@property (nonatomic, strong) UIView *bottomLineView;
+
 
 @end

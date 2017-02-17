@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '71E5EC87EAD1EF19F622C4FB530BA97A'
+               BlueprintIdentifier = '5A238D01AE13AC47D976BCB91A8E33A6'
                BlueprintName = 'Pods-RAC-MVVM-MLShoppingCart'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libPods-RAC-MVVM-MLShoppingCart.a'>

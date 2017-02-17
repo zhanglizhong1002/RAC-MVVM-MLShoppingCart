@@ -20,13 +20,20 @@
 @property (nonatomic, strong) UIView *editView;
 @property (nonatomic, strong) UIButton *reduceButton;
 @property (nonatomic, strong) UIButton *addButton;
-//@property (nonatomic, strong) UILabel *editNumLabel;
 @property (nonatomic, strong) UIButton *editsetButton;
 @property (nonatomic, strong) UIButton *deleteButton;
+
+@property (nonatomic, strong) UIView *acrossLineView;
+@property (nonatomic, strong) UIView *leftVerLineView;
+@property (nonatomic, strong) UIView *rightVerLineView;
 
 @end
 
 @implementation MLShoppingCarTableViewCell
+
+- (void)textFieldDidEndEditing:(UITextField *)textField {
+    [self.viewModel.editTextFieldSubject sendNext:self];
+}
 
 - (void)setViewModel:(MLShoppingCarTableViewCellViewModel *)viewModel
 {
@@ -47,11 +54,13 @@
     
     self.selectButton.selected = viewModel.btnSelected;
     self.editView.hidden = !viewModel.isEdit;
-    self.editNumLabel.text = viewModel.countNum;
+    self.editNumTextField.text = viewModel.countNum;
 }
 
 - (void)my_ml_setupViews
 {
+    self.contentView.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+    
     [self.contentView addSubview:self.selectButton];
     [self.contentView addSubview:self.iconImageView];
     [self.contentView addSubview:self.titleLabel];
@@ -59,13 +68,17 @@
     [self.contentView addSubview:self.pricelLabel];
     [self.contentView addSubview:self.numberLabel];
     
+    [self.contentView addSubview:self.bottomLineView];
+    
     [self.contentView addSubview:self.editView];
     [self.editView addSubview:self.addButton];
     [self.editView addSubview:self.reduceButton];
-    [self.editView addSubview:self.editNumLabel];
+    [self.editView addSubview:self.editNumTextField];
     [self.editView addSubview:self.editsetButton];
     [self.editView addSubview:self.deleteButton];
-    
+    [self.editView addSubview:self.acrossLineView];
+    [self.editView addSubview:self.leftVerLineView];
+    [self.editView addSubview:self.rightVerLineView];
     
     [self setNeedsUpdateConstraints];
     [self updateConstraintsIfNeeded];
@@ -73,15 +86,22 @@
 
 - (void)updateConstraints
 {
+    if (self.contentView.bounds.size.height == 100) {
+        self.bottomLineView.hidden = YES;
+    }
+    else
+    {
+        self.bottomLineView.hidden = NO;
+    }
+    
     [self.selectButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.equalTo(@(8));
-        make.centerY.equalTo(self);
+        make.top.equalTo(@(35));
         make.size.mas_equalTo(CGSizeMake(30, 30));
     }];
     
     [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(@(8));
-        make.bottom.equalTo(@(-8));
         make.left.equalTo(self.selectButton.mas_right).offset(8);
         make.size.mas_equalTo(CGSizeMake(84, 84));
     }];
@@ -108,9 +128,18 @@
     }];
     
     
+    
+    [self.bottomLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.bottom.equalTo(self.contentView);
+        make.height.equalTo(@(5));
+    }];
+    
+    
+    
     [self.editView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.bottom.right.equalTo(self);
+        make.top.right.equalTo(self);
         make.left.mas_equalTo(self.iconImageView.mas_right);
+        make.height.equalTo(@(100));
     }];
     
     [self.deleteButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -120,22 +149,40 @@
     
     [self.reduceButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.left.mas_equalTo(self.editView);
-        make.size.mas_equalTo(CGSizeMake(60, 45));
+        make.size.mas_equalTo(CGSizeMake(60, 44));
     }];
     
     [self.addButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.editView);
         make.right.mas_equalTo(self.deleteButton.mas_left);
-        make.size.mas_equalTo(CGSizeMake(60, 45));
+        make.size.mas_equalTo(CGSizeMake(60, 44));
     }];
     
-    [self.editNumLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.leftVerLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.reduceButton.mas_right);
+        make.top.mas_equalTo(self.editView).offset(5);
+        make.size.mas_equalTo(CGSizeMake(1, 35));
+    }];
+    
+    [self.rightVerLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.addButton.mas_left);
+        make.top.mas_equalTo(self.editView).offset(5);
+        make.size.mas_equalTo(CGSizeMake(1, 35));
+    }];
+    
+    [self.editNumTextField mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.editView);
         make.left.mas_equalTo(self.reduceButton.mas_right);
         make.right.mas_equalTo(self.addButton.mas_left);
-        make.height.equalTo(@(45));
+        make.height.equalTo(@(44));
     }];
     
+    [self.acrossLineView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.addButton.mas_bottom);
+        make.left.mas_equalTo(self.editView);
+        make.right.mas_equalTo(self.deleteButton.mas_left);
+        make.height.equalTo(@(1));
+    }];
     
     [self.editsetButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.addButton.mas_bottom).offset(1);
@@ -216,7 +263,8 @@
 {
     if (!_addButton) {
         _addButton = [[UIButton alloc] init];
-        _addButton.backgroundColor = [UIColor blueColor];
+        _addButton.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+        [_addButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_addButton setTitle:@"+" forState:UIControlStateNormal];
         [_addButton addTarget:self action:@selector(editAddButtonAction) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -227,31 +275,35 @@
 {
     if (!_reduceButton) {
         _reduceButton = [[UIButton alloc] init];
-        _reduceButton.backgroundColor = [UIColor blueColor];
+        _reduceButton.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+        [_reduceButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
         [_reduceButton setTitle:@"-" forState:UIControlStateNormal];
         [_reduceButton addTarget:self action:@selector(editReduceButtonAction:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _reduceButton;
 }
 
-- (UILabel *)editNumLabel
-{
-    if (!_editNumLabel) {
-        _editNumLabel = [[UILabel alloc] init];
-        _editNumLabel.font = [UIFont systemFontOfSize:14];
-        _editNumLabel.textAlignment = NSTextAlignmentCenter;
+- (UITextField *)editNumTextField {
+    if (!_editNumTextField) {
+        _editNumTextField = [[UITextField alloc] init];
+        _editNumTextField.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+        _editNumTextField.font = [UIFont systemFontOfSize:14];
+        _editNumTextField.textAlignment = NSTextAlignmentCenter;
+        _editNumTextField.keyboardType = UIKeyboardTypeNumberPad;
+        _editNumTextField.delegate = self;
     }
-    return _editNumLabel;
+    return _editNumTextField;
 }
 
 - (UIButton *)editsetButton
 {
     if (!_editsetButton) {
         _editsetButton = [[UIButton alloc] init];
-        _editsetButton.backgroundColor = [UIColor blueColor];
-        _editsetButton.titleLabel.font = [UIFont systemFontOfSize:12];
-//        _editsetButton.titleLabel.textAlignment = UITextAlignmentLeft;
+        _editsetButton.backgroundColor = [UIColor colorWithWhite:0.9 alpha:1.0];
+        _editsetButton.titleLabel.font = [UIFont systemFontOfSize:14];
+        _editsetButton.titleLabel.textAlignment = NSTextAlignmentLeft;
         [_editsetButton setTitle:@"规格分类: 大包50g" forState:UIControlStateNormal];
+        [_editsetButton setTitleColor:[UIColor darkTextColor] forState:UIControlStateNormal];
         [_editsetButton addTarget:self action:@selector(editsetButtonAction) forControlEvents:UIControlEventTouchUpInside];
     }
     return _editsetButton;
@@ -261,7 +313,7 @@
 {
     if (!_deleteButton) {
         _deleteButton = [[UIButton alloc] init];
-        _deleteButton.backgroundColor = [UIColor redColor];
+        _deleteButton.backgroundColor = [UIColor orangeColor];
         [_deleteButton setTitle:@"删除" forState:UIControlStateNormal];
         [_deleteButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         [_deleteButton addTarget:self action:@selector(editDeleteButtonAction) forControlEvents:UIControlEventTouchUpInside];
@@ -269,25 +321,54 @@
     return _deleteButton;
 }
 
+- (UIView *)acrossLineView {
+    if (!_acrossLineView) {
+        _acrossLineView = [[UIView alloc] init];
+        _acrossLineView.backgroundColor = [UIColor whiteColor];
+    }
+    return _acrossLineView;
+}
+
+- (UIView *)leftVerLineView {
+    if (!_leftVerLineView) {
+        _leftVerLineView = [[UIView alloc] init];
+        _leftVerLineView.backgroundColor = [UIColor whiteColor];
+    }
+    return _leftVerLineView;
+}
+
+- (UIView *)rightVerLineView {
+    if (!_rightVerLineView) {
+        _rightVerLineView = [[UIView alloc] init];
+        _rightVerLineView.backgroundColor = [UIColor whiteColor];
+    }
+    return _rightVerLineView;
+}
+
+- (UIView *)bottomLineView {
+    if (!_bottomLineView) {
+        _bottomLineView = [[UIView alloc] init];
+        _bottomLineView.backgroundColor = [UIColor whiteColor];
+    }
+    return _bottomLineView;
+}
+
 - (void)editAddButtonAction
 {
-    NSInteger account = [self.editNumLabel.text integerValue];
+    NSInteger account = [self.editNumTextField.text integerValue];
     account++;
-    self.editNumLabel.text = [NSString stringWithFormat:@"%ld",(long)account];
-    
-    [self.viewModel.addBtnClickSubject sendNext:self];
+    self.editNumTextField.text = [NSString stringWithFormat:@"%ld",(long)account];
+    [self.viewModel.editTextFieldSubject sendNext:self];
 }
 
 - (void)editReduceButtonAction:(UIButton *)button
 {
-    NSInteger account = [self.editNumLabel.text integerValue];
-    
+    NSInteger account = [self.editNumTextField.text integerValue];
     if (account>1) {
         account--;
     }
-    self.editNumLabel.text = [NSString stringWithFormat:@"%ld",(long)account];
-    
-    [self.viewModel.reduceBtnClickSubject sendNext:self];
+    self.editNumTextField.text = [NSString stringWithFormat:@"%ld",(long)account];
+    [self.viewModel.editTextFieldSubject sendNext:self];
 }
 
 - (void)editsetButtonAction
